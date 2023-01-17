@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <title>しまっぷ</title>
+    <script src="components/loader.js"></script><link rel="stylesheet" href="components/loader.css">
+    <script src="js/education.js" defer></script><script src="js/config.js" defer></script>
+    <link rel="icon" href="img/jung.png">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="start">
+          <p><img src="img/jung.png" alt=""></p>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+          <symbol id="icon-clear" viewBox="0 0 24 24">
+            <path
+              d="M18.984 6.422 13.406 12l5.578 5.578-1.406 1.406L12 13.406l-5.578 5.578-1.406-1.406L10.594 12 5.016 6.422l1.406-1.406L12 10.594l5.578-5.578z"
+            />
+          </symbol>
+        </svg>
+        <div class="sidebar">
+          <button aria-label="close sidebar" type="button" class="close-button">
+            <svg>
+              <use xlink:href="#icon-clear" />
+            </svg>
+          </button>
+        </div>
+        <ul class="layers"></ul>
+        <div id="map"></div>
+    </div>
+    <script src="js/main.js" defer></script>
+</body>
+<script>
+    $(function() {
+      setTimeout(function(){
+        $('.start p').fadeIn(1600);
+      },500); // 0.5秒後にロゴをフェードイン
+      setTimeout(function(){
+        $('.start').fadeOut(500);
+      },2500); // 2.5秒後にロゴ含め真っ白背景をフェードアウト
+    });
+</script>
+</html>
